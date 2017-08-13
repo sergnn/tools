@@ -86,7 +86,9 @@ if __name__ == '__main__':
     bar.finish()
 
     print('{} new points'.format(new_point_count))
-
+    if new_point_count == 0:
+        sys.exit()
+        
     with open('cache', 'wt') as cache_file:
         cache_file.write('\n'.join(cache))
 
