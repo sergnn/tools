@@ -7,7 +7,7 @@ def win_bits() -> int:
 
 
 def win_ver():
-    ver = platform.platform().split('-')[2].split('.')
+    ver = platform.version().split('.')
     major_ver = int(ver[0])
     build = int(ver[2])
 
