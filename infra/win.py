@@ -13,9 +13,9 @@ def win_release_id() -> int:
     key = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion"
     val = r"ReleaseID"
     key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, key)
-    releaseId = int(winreg.QueryValueEx(key, val)[0])
+    release_id = int(winreg.QueryValueEx(key, val)[0])
     winreg.CloseKey(key)
-    return releaseId
+    return release_id
 
 
 def enum_winupdates():
