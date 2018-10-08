@@ -146,8 +146,10 @@ class WinVer(object):
                 return WinName('10 Redstone 3', '10RS3', False)
             elif self.build <= 17134:
                 return WinName('10 Redstone 4', '10RS4', False)
-            else:
+            elif self.build <= 17763:
                 return WinName('10 Redstone 5', '10RS5', False)
+            else:
+                return WinName('10 19H1', '1019H1', False)
 
 
 def enum_winupdates():
